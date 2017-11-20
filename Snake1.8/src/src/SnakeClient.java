@@ -14,7 +14,7 @@ public class SnakeClient extends Frame {
 
     int x = 600, y = 600;
 
-    Node Snake = new Node(600, 600);
+    Snake snake = new Snake(x, y);
 
     Node Snake2 = new Node(600, 300);
 
@@ -39,7 +39,7 @@ public class SnakeClient extends Frame {
 
 
     public void paint(Graphics g){
-        Snake.draw(g);
+        snake.draw(g);
         Snake2.draw(g);
     }
 
@@ -93,9 +93,9 @@ public class SnakeClient extends Frame {
 
         @Override
         public void keyPressed(KeyEvent e) {
-            Snake.keyPressed(e);
+            snake.keyPressed(e);
         }
 
-        public void keyReleased(KeyEvent e) { Snake.keyRelease(e); }
+        public void keyReleased(KeyEvent e) { snake.keyRelease(e); }
     }
 }
